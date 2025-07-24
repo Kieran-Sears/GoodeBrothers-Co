@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
     prev === null || prev === void 0 ? void 0 : prev.addEventListener('click', showPrev);
     next === null || next === void 0 ? void 0 : next.addEventListener('click', showNext);
     // Load URLs from urls.json
-    fetch('urls.json')
+    fetch('./urls.json')
         .then(response => response.json())
         .then((data) => {
         imageUrls = data;
