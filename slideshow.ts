@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
   next?.addEventListener('click', showNext);
 
   // Load URLs from urls.json
-  fetch('urls.json')
+  fetch('./urls.json')
     .then(response => response.json())
     .then((data: string[]) => {
       imageUrls = data;
