@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GoodeBrothers & Co</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen">
+  <!-- Header -->
+  <header class="bg-green-800 text-white p-6 text-center">
+    <h1 class="text-4xl font-bold">GoodeBrothers &amp; Co</h1>
+    <p class="mt-2">Hardscaping & Grounds Maintenance — Bruisyard, Saxmundham</p>
+  </header>
+
+  <!-- Portfolio / Slideshow -->
+  <section id="portfolio" class="flex-1 bg-gray-100 py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-semibold text-center mb-8">Our Work</h2>
+      <div id="slideshow" class="relative w-full max-w-4xl mx-auto flex items-center justify-center">
+        <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 shadow rounded-full z-10">◀</button>
+        <div id="slide-container" class="w-full flex justify-center"></div>
+        <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 shadow rounded-full z-10">▶</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact section -->
+  <section id="contact" class="bg-white py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-semibold text-center mb-6">Get in Touch</h2>
+      <form class="max-w-xl mx-auto space-y-4">
+        <input type="text" placeholder="Name" class="w-full p-3 border rounded" />
+        <input type="email" placeholder="Email" class="w-full p-3 border rounded" />
+        <textarea placeholder="Your message" class="w-full p-3 border rounded h-32"></textarea>
+        <button type="submit" class="bg-green-800 text-white px-6 py-3 rounded hover:bg-green-700">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <div>© 2025 GoodeBrothers &amp; Co — Located in Bruisyard, Saxmundham</div>
+      <div class="flex space-x-4">
+        <a href="https://www.instagram.com/goodebrothersco" target="_blank" class="hover:text-pink-500">
+          <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.584.012 4.849.07 1.17.057 1.967.246 2.428.415a4.916 4.916 0 011.745 1.008 4.916 4.916 0 011.008 1.745c.17.461.358 1.258.415 2.428.058 1.265.07 1.649.07 4.849s-.012 3.584-.07 4.849c-.057 1.17-.246 1.967-.415 2.428a4.916 4.916 0 01-1.008 1.745 4.916 4.916 0 01-1.745 1.008c-.461.17-1.258.358-2.428.415-1.265.058-1.649.07-4.849.07s-3.584-.012-4.849-.07c-1.17-.057-1.967-.246-2.428-.415a4.916 4.916 0 01-1.745-1.008 4.916 4.916 0 01-1.008-1.745c-.17-.461-.358-1.258-.415-2.428C2.212 15.784 2.2 15.4 2.2 12.2s.012-3.584.07-4.849c.057-1.17.246-
