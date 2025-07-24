@@ -1,5 +1,5 @@
-// No hardcoded imageUrls
-let imageUrls = [];
+const IMAGE_COUNT = 280; // Replace with your actual image count!
+const IMAGE_EXT = 'jpg'; // Change to 'png' etc. if needed
 let current = 0;
 function renderSlide(index) {
     const container = document.getElementById('slide-container');
@@ -7,17 +7,17 @@ function renderSlide(index) {
         return;
     container.innerHTML = '';
     const img = document.createElement('img');
-    img.src = imageUrls[index];
+    img.src = `assets/${index}.${IMAGE_EXT}`;
     img.alt = `Project photo ${index + 1}`;
     img.className = 'slide w-full h-auto max-h-[450px] rounded shadow';
     container.appendChild(img);
 }
 function showPrev() {
-    current = (current - 1 + imageUrls.length) % imageUrls.length;
+    current = (current - 1 + IMAGE_COUNT) % IMAGE_COUNT;
     renderSlide(current);
 }
 function showNext() {
-    current = (current + 1) % imageUrls.length;
+    current = (current + 1) % IMAGE_COUNT;
     renderSlide(current);
 }
 window.addEventListener('DOMContentLoaded', () => {
@@ -25,16 +25,5 @@ window.addEventListener('DOMContentLoaded', () => {
     const next = document.getElementById('next');
     prev === null || prev === void 0 ? void 0 : prev.addEventListener('click', showPrev);
     next === null || next === void 0 ? void 0 : next.addEventListener('click', showNext);
-    // Load URLs from urls.json
-    fetch('./urls.json')
-        .then(response => response.json())
-        .then((data) => {
-        imageUrls = data;
-        if (imageUrls.length)
-            renderSlide(0);
-    })
-        .catch(err => {
-        // fallback or error handling
-        console.error("Failed to load urls.json", err);
-    });
+    renderSlide(0);
 });
